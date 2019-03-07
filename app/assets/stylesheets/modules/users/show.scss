@@ -1,3 +1,10 @@
+.bread-crumbs {
+    border-top: 1px solid #eee;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+    height: 50px;
+    background-color: #fff;
+}
+
 .mypage {
   margin: 0;
   padding: 0;
@@ -10,18 +17,10 @@
   box-sizing: border-box;
   color: #000;
   min-height: 100%;
-
-  .bread-crumbs {
-    border-top: 1px solid #eee;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
-    height: 50px;
-    background-color: #fff;
-  }
-
   &__body {
-    margin: 40px auto 0;
+    margin: 0 auto 0;
     width: 1020px;
-    padding: 0 0 40px;
+    padding: 40px 0 40px;
     &__main {
       float: right;
       width: 700px;
@@ -32,9 +31,8 @@
         height: 160px;
         padding: 20px;
         background-color: #fff;
-        background-image: url("JoJo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-image: url(https://bowlroll.net/file_thumbnail/c/1/6/c163f3842f404f0a2ce19b12834969e2a82d6aca54404big.jpg);
+        background-size: 50px;
         background-position: center;
         a {
           display: block;
@@ -44,6 +42,8 @@
           right: 0;
           -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+          text-decoration: none;
+          color: #000;
           figure {
             overflow: hidden;
             height: 60px;
@@ -54,6 +54,8 @@
           h2 {
           margin: 8px 0 0;
           font-size: 14px;
+          line-height: 1.4;
+          font-weight: bold;
           }
           .mypage-number {
             margin: 8px 0 0;
@@ -83,12 +85,17 @@
             display: inline-block;
             text-align: center;
             vertical-align: top;
-            a {
-              position: relative;
-              display: block;
-              color: #333;
-              font-size: 16px;
-              line-height: 72px;
+            h3 {
+              font-size: 22px;
+              font-weight: bold;
+              a {
+                position: relative;
+                display: block;
+                color: #333;
+                font-size: 16px;
+                line-height: 72px;
+                text-decoration: none;
+              }
             }
           }
           .notification {
@@ -102,6 +109,18 @@
           li {
             position: relative;
             border-bottom: 1px solid #eee;
+            a {
+              text-decoration: none;
+              color: #000;
+              .fa-angle-right {
+                position: absolute;
+                top: 50%;
+                right: 16px;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                font-size: 26px;
+              }
+            }
           }
           &__link {
             display: block;
@@ -182,12 +201,17 @@
             display: inline-block;
             text-align: center;
             vertical-align: top;
-            a {
-              position: relative;
-              display: block;
-              color: #333;
-              font-size: 16px;
-              line-height: 72px;
+            h3 {
+              font-size: 22px;
+              font-weight: bold;
+              a {
+                position: relative;
+                display: block;
+                color: #333;
+                font-size: 16px;
+                line-height: 72px;
+                text-decoration: none;
+              }
             }
           }
           .trading {
@@ -228,29 +252,8 @@
     clear: both;
     display: block;
   }
-
-  h2 {
-    line-height: 1.4;
-    font-weight: bold;
-  }
-  h3 {
-    font-size: 22px;
-    font-weight: bold;
-  }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
   img {
     vertical-align: middle;
-  }
-  .fa-angle-right {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    font-size: 26px;
   }
   i {
   display: inline-block;

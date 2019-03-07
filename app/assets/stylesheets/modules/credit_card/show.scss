@@ -1,0 +1,99 @@
+.mypage__body__main {
+  .payment-method {
+    background-color: #fff;
+    &__title {
+      font-size: 24px;
+      padding: 8px 24px;
+      border-bottom: 1px solid #f5f5f5;
+      text-align: center;
+    }
+    &__content {
+      padding: 64px;
+      border-top: 1px solid #f5f5f5;
+      &__head {
+        max-width: 320px;
+        margin: 0 auto;
+        &__title {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+      // &__list {
+      //   li {
+      //     padding: 24px 0;
+      //     border-bottom: 1px solid #eee;
+      //     .setting-card {
+      //       position: relative;
+      //       max-width: 320px;
+      //       margin: 0 auto;
+      //       figure {
+      //         margin: 0;
+      //         img {
+      //           vertical-align: middle;
+      //         }
+      //       }
+      //       &__payment-num {
+      //         margin: 8px 0 0;
+      //         font-size: 12px;
+      //       }
+      //       &__payment-remove {
+      //         position: absolute;
+      //         top: 0;
+      //         right: 0;
+      //         padding: 4px 6px;
+      //         background: #fff;
+      //         border-radius: 3px;
+      //         border: 1px solid #ea352d;
+      //         color: #ea352d;
+      //         font-size: 14px;
+      //       }
+      //     }
+      //   }
+      // }
+      &__add {
+        padding: 24px 0;
+        border-bottom: 1px solid #eee;
+        &__box {
+          max-width: 320px;
+          margin: 0 auto;
+          &__btn-red {
+            margin-bottom: 8px !important;
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            i {
+              margin-right: 16px;
+              font-size: 16px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      &__explanation {
+        a {
+          display: block;
+          margin: 40px 0 0;
+          text-align: right;
+          span {
+            vertical-align: middle;
+          }
+          i {
+            margin: 0 0 0 8px;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

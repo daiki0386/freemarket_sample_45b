@@ -1,25 +1,26 @@
+= render "shared/header"
+
+%nav.bread-crumbs
+
 .mypage
-  = render "shared/header"
-
-  %nav.bread-crumbs
-
   %main.mypage__body.clearfix
     .mypage__body__main
       %h2.mypage__body__main__title プロフィール
-      %form{action: "https://www.mercari.com/jp/mypage/profile/", method: "POST"}
-        %input{name: "__csrf_value", type: "hidden", value: "user_id?"}/
+      %form{action: "#", method: "POST"}
+        %input{name: "#", type: "hidden", value: "user_id?"}/
         .mypage__body__main__user-name
           %figure
-            = image_tag "icon.png", alt: "ユーザーアイコン", height: "60", width: "60"
-          %input.mypage__body__main__user-name__input{name: "nickname", placeholder: "例) 『遊☆戯☆王』真崎杏子", type: "text", value: ""}/
+            = image_tag "//static.mercdn.net/images/member_photo_noimage_thumb.png", alt: "ユーザーアイコン", height: "60", width: "60"
+          %input.mypage__body__main__user-name__input{name: "nickname", placeholder: "例) 『遊戯王』真崎杏子", type: "text", value: ""}/
         .mypage__body__main__profile
           %textarea.mypage__body__main__profile__input{name: "introduction", placeholder: "例）「次回、『城之内 死す』。デュエルスタンバイ！」"}
-          %input{name: "after_save_callback", type: "hidden", value: "https://www.mercari.com/jp/mypage/profile/"}/
-          %button.mypage__body__main__profile__btn-red{type: "submit"} 変更する
+          %input{name: "after_save_callback", type: "hidden", value: "#"}/
+          %button.mypage__body__main__profile__btn-red{type: ""} 変更する
 
     = render "shared/mypage-sidebar"
 
-  = render 'shared/appbanner'
+= render 'shared/appbanner'
 
-  = render 'shared/footer'
+= render 'shared/footer'
 
+= render 'shared/sellbtn'

@@ -1,0 +1,180 @@
+= render 'shared/header'
+
+%section.product-page-detail
+  %h1.product-page-detail__title
+    NIKE ジャージ ナイキ ナイロンジャケット ウィンドブレーカー
+  .product-page-detail__main.product-page-main.clearfix
+    .product-page-main__images
+      = image_tag "https://static.mercdn.net/item/detail/orig/photos/m73726995777_1.jpg", class: "product-page-main__images--main"
+      .product-page-main__images--soldout-badge
+      .product-page-main__images--soldout
+        SOLD
+      .product-page-main__images--others.clearfix
+        - 10.times do
+          = image_tag "https://static.mercdn.net/item/detail/orig/photos/m73726995777_1.jpg", class: "other-image"
+        .other-image-masks.clearfix
+          - 10.times do
+            .other-image-masks__mask
+    %table.product-page-main__details
+      %tbody.item-detail-table
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            出品者
+          %td.item-detail-table__record--value
+            = link_to "市川", ""
+            .user-raitings.clearfix
+              .user-raitings__raiting
+                =fa_icon "smile lg", text:12
+              .user-raitings__raiting
+                =fa_icon "meh lg", text:12
+              .user-raitings__raiting
+                =fa_icon "frown lg", text:12
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            カテゴリー
+          %td.item-detail-table__record--value
+            = link_to "メンズ", "", { class: "table-link" }
+            = link_to "", {class: "table-link"} do
+              = fa_icon "angle-right lg", text:"小物"
+            = link_to "", {class: "table-link"} do
+              = fa_icon "angle-right lg", text:"財布"
+
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            ブランド
+          %td.item-detail-table__record--value
+            = link_to "ナイキ", "", { class: "table-link" }
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            商品のサイズ
+          %td.item-detail-table__record--value
+            M
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            商品の状態
+          %td.item-detail-table__record--value
+            未使用に近い
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            配送料の負担
+          %td.item-detail-table__record--value
+            送料込み(出品者負担)
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            配送の方法
+          %td.item-detail-table__record--value
+            ゆうゆうメルカリ便
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            配送元地域
+          %td.item-detail-table__record--value
+            = link_to "北海道", "", { class: "table-link" }
+        %tr.item-detail-table__record
+          %th.item-detail-table__record--key
+            発送日の目安
+          %td.item-detail-table__record--value
+            1~2日で発送
+  .product-page-detail__price
+    %span.product-page-detail__price--price
+      ￥2,222
+    %span.product-page-detail__price--tax
+      (税込み)
+    %span.product-page-detail__price--shipping-fee
+      送料込み
+  = link_to "", class: "product-page-detail__buy-button" do
+    購入画面に進む
+  .product-page-detail__buy-button--soldout
+    売り切れました
+  .product-page-detail__description
+    2018年12月にAmazonから購入しました。デザインなど気にいって購入したのですが、カードを入れるポケットが少し小さいのと私には全体的に少し小さいので出品します。
+    %br
+    チャームがないのを届いて数日後に知ったので、初めからなかったのか？よくわからないのでご了承願います。チャームを外して送る事も可能です。箱あり箱なしも可能です！2018年12月にAmazonから購入しました。デザインなど気にいって購入したのですが、カードを入れるポケットが少し小さいのと私には全体的に少し小さいので出品します。
+    %br
+    チャームがないのを届いて数日後に知ったので、初めからなかったのか？よくわからないのでご了承願います。チャームを外して送る事も可能です。箱あり箱なしも可能です！
+  .product-page-detail__buttons
+    = button_tag "", class: "product-page-detail__buttons--liked" do
+      = fa_icon "heart lg"
+      %span
+        いいね!
+      %span
+        12
+    = link_to "", class: "product-page-detail__buttons--report" do
+      = fa_icon "flag lg"
+      %span
+        不適切な商品の報告
+    .product-page-detail__buttons--safe
+      = link_to "" do
+        = fa_icon "lock lg", text:"あんしん・あんぜんへの取り組み"
+
+.product-page-comment
+  .message-content
+    %ul.product-page-comment__messages.item-messages
+      %li.item-messages__message.clearfix
+        .item-messages__message--user
+          = link_to "" do
+            %figure.message-user
+              .message-user__image
+                = image_tag "https://img.buzzfeed.com/buzzfeed-static/static/2018-01/19/4/enhanced/buzzfeed-prod-fastlane-01/longform-original-6927-1516353932-3.jpg?downsize=1600:*&output-format=auto&output-quality=auto"
+              %figcaption.message-user__name
+                石原
+        .item-messages__message--body.message-body
+          .message-body__text
+            こんにちは！無料で譲っていただけませんか？
+          .message-body__icons
+            =fa_icon "clock lg", text:"６日前"
+      %li.item-messages__message.clearfix
+        .item-messages__message--user
+          = link_to "" do
+            %figure.message-user
+              .message-user__image
+                = image_tag "https://upload.wikimedia.org/wikipedia/commons/9/9e/Ours_brun_parcanimalierpyrenees_1.jpg"
+              %figcaption.message-user__name
+                市川
+        .item-messages__message--body.message-body
+          .message-body__text
+            無理です！
+          .message-body__icons
+            =fa_icon "clock lg", text:"５日前"
+  .massege-content
+    .product-page-comment__attention
+      相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %textarea.product-page-comment__textarea
+    = button_tag "", class: "product-page-comment__submit" do
+      %span
+        コメントする
+
+%ul.product-page-prev-next-link.clearfix
+  %li.product-page-prev-next-link__prev
+    = link_to "", class: "clearfix" do
+      = fa_icon "angle-left lg", class: "product-page-prev-next-link__prev--icon"
+      %span.product-page-prev-next-link__prev--item-name
+        未使用 TED BAKER 名刺入れ
+  %li.product-page-prev-next-link__next
+    = link_to "", class: "clearfix"  do
+      = fa_icon "angle-right lg", class: "product-page-prev-next-link__next--icon"
+      %span.product-page-prev-next-link__next--item-name
+        bulle de savon　波の刺繍スカート
+
+- 2.times do
+  %section.product-page-assosiation-items
+    = link_to "" do
+      %h2.section.product-page-assosiation-items__title
+        市川さんの別の商品
+    .clearfix
+      - 6.times do
+        = link_to "", class: "product-page-assosiation-items__items-box items-box" do
+          = image_tag "https://static.mercdn.net/item/detail/orig/photos/m73726995777_1.jpg" ,class: "items-box__image"
+          .items-box__body
+            .items-box__body--details.item-details.clearfix
+              %h3.item-details__name
+                スキニーパンツ
+              .item-details__num.clearfix
+                .item-details__num--price
+                  ￥7,000
+                .item-details__num--liked
+                  = fa_icon "heart-o", text:"12"
+              .item-details__tax
+                (税込み)
+
+= render 'shared/appbanner'
+= render 'shared/footer'

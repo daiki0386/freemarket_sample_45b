@@ -1,0 +1,92 @@
+= render "shared/header"
+
+.mypage
+  %nav.bread-crumbs
+
+  %main.mypage__body.clearfix
+    .mypage__body__main
+      %section.creditcard-form
+        %h2.creditcard-form__title
+          クレジットカード情報入力
+        %form.creditcard-form__body
+          .creditcard-form__container
+            .form-group-card-num
+              %label.form-group-card-num__label{ for: "payment_card_no" }
+                カード番号
+              %span.form-group-card-num__badge
+                必須
+              %input.form-group-card-num__input#payment_card_no{ type:"text", placeholder:"半角数字のみ" }
+              %ul.form-group-card-num__card-lists.clearfix
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2845599746", class: "card-list__image"
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?2845599746", class: "card-list__image"
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/saison-card.svg?2845599746", class: "card-list__image"
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?2845599746", class: "card-list__image"
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/american_express.svg?2845599746", class: "card-list__image"
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?2845599746", class: "card-list__image"
+                %li.card-list
+                  = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?2845599746", class: "card-list__image"
+            .form-group-card-expire
+              %label.form-group-card-expire__label{ for: "payment_card_expire" }
+                有効期限
+              %span.form-group-card-expire__badge
+                必須
+              .form-group-card-expire__wrap
+                %select#payment_card_expire_mm.select-default.form-group-card-expire__input
+                  %option{:value => "01"} 01
+                  %option{:value => "02"} 02
+                  %option{:value => "03"} 03
+                  %option{:value => "04"} 04
+                  %option{:value => "05"} 05
+                  %option{:value => "06"} 06
+                  %option{:value => "07"} 07
+                  %option{:value => "08"} 08
+                  %option{:value => "09"} 09
+                  %option{:value => "10"} 10
+                  %option{:value => "11"} 11
+                  %option{:value => "12"} 12
+                %span
+                  月
+              .form-group-card-expire__wrap
+                %select#payment_card_expire_yy.select-default.form-group-card-expire__input
+                  %option{:value => "19"} 19
+                  %option{:value => "20"} 20
+                  %option{:value => "21"} 21
+                  %option{:value => "22"} 22
+                  %option{:value => "23"} 23
+                  %option{:value => "24"} 24
+                  %option{:value => "25"} 25
+                  %option{:value => "26"} 26
+                  %option{:value => "27"} 27
+                  %option{:value => "28"} 28
+                  %option{:value => "29"} 29
+                %span
+                  年
+            .form-group-card-code
+              %label.form-group-card-code__label{ for: "payment_card_no" }
+                セキュリティコード
+              %span.form-group-card-code__badge
+                必須
+              %input.form-group-card-num__input#payment_card_no{ type:"text", placeholder:"カード背面4桁もしくは3桁の番号" }
+              .form-group-card-code__explain
+                %span.form-group-card-code__explain--question
+                  ?
+                カード裏面の番号とは
+              -#ーーーーーjsで表示するーーーー
+              -# .form-group-card-code__is-show-wrap
+              -#   .form-group-card-code__is-show
+              -#     カードの裏面をご参照ください。
+              -#     %br/
+              -#     %img.form-group-card-code__is-show--image{ src: "//www-mercari-jp.akamaized.net/assets/img/signup/seq-card.png?2845599746" }
+              = button_tag "追加する", {class:"form-group-card-submit"}
+    = render "shared/mypage-sidebar"
+
+= render 'shared/appbanner'
+
+= render 'shared/footer'
+= render 'shared/sellbtn'
