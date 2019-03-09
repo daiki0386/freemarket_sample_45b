@@ -26,7 +26,7 @@
 
           %section.payment-method__content__add
             .payment-method__content__add__box
-              = link_to "#" , class: "payment-method__content__add__box__btn-red" do
+              = link_to new_user_credit_card_path(current_user.id) , class: "payment-method__content__add__box__btn-red" do
                 = fa_icon "credit-card"
                 クレジットカードを追加する
           .payment-method__content__explanation

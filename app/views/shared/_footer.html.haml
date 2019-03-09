@@ -81,7 +81,7 @@
             %a.active{:href => "https://www.mercari.com/jp/"}
               %img{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/flag_jp.png?2855175014", :width => "22"}>/
               日本
-  %a.footer-logo{:href => "https://www.mercari.com/jp/"}
+  = link_to root_path, class: "footer-logo" do
     %img{:alt => "mercari", :height => "33", :src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2855175014", :width => "124"}/
   %p.footer-copyright
     %small © 2019 Mercari

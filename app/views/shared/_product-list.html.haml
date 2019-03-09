@@ -1,0 +1,48 @@
+.lists-container
+  %ul.associations-links.clearfix
+    %li.associations-links__link
+      = link_to "スニーカー", "#"
+    %li.associations-links__link
+      = link_to "ウエストポーチ", "#"
+    %li.associations-links__link
+      = link_to "ブルゾン", "#"
+    %li.associations-links__link
+      = link_to "シャツ/カットソー(半袖/袖なし)", "#"
+    %li.associations-links__link
+      = link_to "ナイロンジャケット", "#"
+    %li.associations-links__link
+      = link_to "スニーカー", "#"
+    %li.associations-links__link
+      = link_to "スウェット", "#"
+    %li.associations-links__link
+      = link_to "パーカー", "#"
+    %li.associations-links__link
+      = link_to "ダウンジャケット", "#"
+    %li.associations-links__link
+      = link_to "ナイロンジャケット", "#"
+    %li.associations-links__link
+      = link_to "スニーカー", "#"
+    %li.associations-links__link
+      = link_to "スウェット", "#"
+    %li.associations-links__link
+      = link_to "パーカー", "#"
+    %li.associations-links__link
+      = link_to "ダウンジャケット", "#"
+  %secttion.products-list
+    %h1.products-list__title
+      ナイキの商品一覧
+    .products-list__item-container.clearfix
+      - 30.times do
+        = link_to "/products/1", class: "products-list-item-box" do
+          = image_tag "https://scontent-lax3-1.cdninstagram.com/vp/1ff0e601ec787dcccc6e4f90b9914312/5D007AF3/t51.2885-15/e35/s480x480/36940681_380695745790939_5129763437735313408_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com" ,class: "products-list-item-box__image"
+          .products-list-item-box__body
+            .items-box__body--details.item-details.clearfix
+              %h3.item-details__name
+                スキニーパンツ
+              .item-details__num.clearfix
+                .item-details__num--price
+                  ￥7,000
+                .item-details__num--liked
+                  = fa_icon "heart-o", text:"12"
+              .item-details__tax
+                (税込み)

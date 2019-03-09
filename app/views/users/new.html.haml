@@ -5,7 +5,7 @@
       %h2.l-single-head 新規会員登録
       .l-single-inner
         .l-single-content
-          %a.btn-default.btn-mail{:href => "https://www.mercari.com/jp/signup/registration/"}
+          = link_to new_user_registration_path, class: "btn-default btn-mail" do
             %i.icon-mail
             メールアドレスで登録
           %button#facebook-login.btn-default.btn-sns.btn-sns-facebook

@@ -30,11 +30,11 @@
             %p 1995/04/01
           .form-group
             %label{for: "zip_code"} 郵便番号
-            %span.form-arbitrary　任意
+            %span.form-arbitrary 任意
             %input{type: "text", placeholder: "例) 1234567", name: "zip_code", class: "input-default"}
           .form-group
             %label{for: "pref"} 都道府県
-            %span.form-arbitrary　任意
+            %span.form-arbitrary 任意
             .select-wrap
               %select.select-default{name: "pref"}
                 %option{:value => ""} ---
@@ -88,15 +88,15 @@
               = fa_icon 'arrow-bottom', class: "icon_arrow_bottom"
           .form-group
             %label{for: "city"} 市区町村
-            %span.form-arbitrary　任意
+            %span.form-arbitrary 任意
             %input{type: "text", placeholder: "例) 横浜市緑区", name: "city", class: "input-default"}
           .form-group
             %label{for: "address1"} 番地
-            %span.form-arbitrary　任意
+            %span.form-arbitrary 任意
             %input{type: "text", placeholder: "例) 青山1-1-1", name: "address1", class: "input-default"}
           .form-group
             %label{for: "building"} 建物名
-            %span.form-arbitrary　任意
+            %span.form-arbitrary 任意
             %input{type: "text", placeholder: "例) 柳ビル103", name: "building", class: "input-default"}
           %button{type: "submit", class: "btn-default btn-red"} 登録する
           .form-group.text-right

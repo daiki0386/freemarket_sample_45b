@@ -10,7 +10,7 @@
       %section.signout
         %nav.signout__box
           %h6
-            %a{:href => ""}
+            = link_to destroy_user_session_path, method: :delete do
               ログアウト
 
     = render 'shared/mypage-sidebar'

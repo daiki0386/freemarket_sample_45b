@@ -1,21 +1,37 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.single-container
+  = render 'shared/logo-header'
+  %main.single-main
+    %section.new-registration-form
+      %h2.new-registration-form__title
+        会員情報入力
+      .new-registration-form__form
+        .new-registration-form__container
+          = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            - if resource.errors.any?
+              .new-registration-error-messages
+                %ul
+                  - resource.errors.full_messages.each do |message|
+                    %li= message
+
+            .registration-form-nickname
+              = f.label :ニックネーム, class: "registration-form-nickname__label"
+              %span.registration-form-nickname__badge
+                必須
+              = f.text_field :nickname,autofocus: true, class: "registration-form-nickname__input"
+
+            .registration-form-email
+              = f.label :メールアドレス, class: "registration-form-email__label"
+              %span.registration-form-email__badge
+                必須
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "registration-form-email__input"
+            .registration-form-pass
+              = f.label :パスワード, class: "registration-form-pass__label"
+              %span.registration-form-pass__badge
+                必須
+              = f.password_field :password, autocomplete: "new-password", class: "registration-form-pass__input"
+            .registration-form-pass
+              = f.label :パスワード確認, class: "registration-form-pass__label"
+              %span.registration-form-pass__badge
+                必須
+              = f.password_field :password_confirmation, autocomplete: "new-password", class: "registration-form-pass__input"
+            = f.submit "登録する", class: "registration-form-pass__submit"

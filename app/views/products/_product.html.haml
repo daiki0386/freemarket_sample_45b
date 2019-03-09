@@ -1,0 +1,13 @@
+= link_to "/products/1", class: "assosiation-items__items-box items-box" do
+  = image_tag "https://pbs.twimg.com/profile_images/773784538350706689/PMoiE8tk_400x400.jpg" ,class: "items-box__image"
+  .items-box__body
+    .items-box__body--details.item-details.clearfix
+      %h3.item-details__name
+        スキニーパンツ
+      .item-details__num.clearfix
+        .item-details__num--price
+          ￥7,000
+        .item-details__num--liked
+          = fa_icon "heart-o", text:"12"
+      .item-details__tax
+        (税込み)

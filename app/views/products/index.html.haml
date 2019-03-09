@@ -4,44 +4,74 @@
 
   %main.white{:role => "main"}
     .owl-item.active
-      %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-new-life.jpg"}/
-      %a.top-banner.banner-new-life{:href => "#"}
+      = link_to "", "#", class: "header-banner"
     %section.pickup-container
       %h2.pickup-head ピックアップカテゴリー
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} レディース 新着アイテム
+        %h3.items-box-container__title
+          = link_to "レディース 新着アイテム", "/brands/1"
         .items-box-content.clearfix
-          %section.items-box
-            = image_tag ("https://images-na.ssl-images-amazon.com/images/I/51E-p2sSp8L._UX522_.jpg")
-          %section.items-box
-            = image_tag ("https://images-na.ssl-images-amazon.com/images/I/51E-p2sSp8L._UX522_.jpg")
-          %section.items-box
-            = image_tag ("https://images-na.ssl-images-amazon.com/images/I/51E-p2sSp8L._UX522_.jpg")
-          %section.items-box
-            = image_tag ("https://images-na.ssl-images-amazon.com/images/I/51E-p2sSp8L._UX522_.jpg")
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} メンズ 新着アイテム
+        %h3.items-box-container__title
+          = link_to "メンズ 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} ベビー・キッズ 新着アイテム
+        %h3.items-box-container__title
+          = link_to "ベビー・キッズ 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} コスメ・香水・美容 新着アイテム
+        %h3.items-box-container__title
+          = link_to "コスメ・香水・美容 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %h2.pickup-head ピックアップブランド
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} シャネル 新着アイテム
+        %h3.items-box-container__title
+          = link_to "シャネル 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} ルイ ヴィトン 新着アイテム
+        %h3.items-box-container__title
+          = link_to "ルイ ヴィトン 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} シュプリーム 新着アイテム
+        %h3.items-box-container__title
+          = link_to "シュプリーム 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
       %section.items-box-container.clearfix
-        %h3.text-center
-          %a{:href => "#"} ナイキ 新着アイテム
+        %h3.items-box-container__title
+          = link_to "ナイキ 新着アイテム", "/brands/1"
+        .items-box-content.clearfix
+          - 4.times do
+            = render 'product'
+        .view-all
+          = link_to "すべての商品を見る", "/brands/1"
 
   = render 'shared/appbanner'
 

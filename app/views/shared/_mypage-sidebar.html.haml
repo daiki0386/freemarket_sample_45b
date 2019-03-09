@@ -2,7 +2,7 @@
   %nav.mypage-nav
     %ul.mypage-nav__list
       %li
-        = link_to "#", class: "mypage-nav__list__item" do
+        = link_to user_path(current_user.id), class: "mypage-nav__list__item" do
           マイページ
           = fa_icon "angle-right"
       %li
@@ -18,7 +18,7 @@
           いいね！一覧
           = fa_icon "angle-right"
       %li
-        = link_to "#", class: "mypage-nav__list__item" do
+        = link_to new_product_path, class: "mypage-nav__list__item" do
           出品する
           = fa_icon "angle-right"
       %li
@@ -74,7 +74,7 @@
     %h3.mypage-nav__head 設定
     %ul.mypage-nav__list
       %li
-        = link_to "#", class: "mypage-nav__list__item" do
+        = link_to edit_user_path(current_user.id), class: "mypage-nav__list__item" do
           プロフィール
           = fa_icon "angle-right"
       %li
@@ -82,7 +82,7 @@
           発送元・お届け先住所変更
           = fa_icon "angle-right"
       %li
-        = link_to "#", class: "mypage-nav__list__item" do
+        = link_to new_user_credit_card_path(current_user.id), class: "mypage-nav__list__item" do
           支払い方法
           = fa_icon "angle-right"
       %li
@@ -90,7 +90,7 @@
           メール/パスワード
           = fa_icon "angle-right"
       %li
-        = link_to "#", class: "mypage-nav__list__item" do
+        = link_to new_user_profile_path(current_user.id), class: "mypage-nav__list__item" do
           本人情報
           = fa_icon "angle-right"
       %li
@@ -98,6 +98,6 @@
           電話番号の確認
           = fa_icon "angle-right"
       %li
-        = link_to "#", class: "mypage-nav__list__item" do
+        = link_to signout_users_path, class: "mypage-nav__list__item" do
           ログアウト
           = fa_icon "angle-right"
