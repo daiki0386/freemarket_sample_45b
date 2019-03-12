@@ -57,20 +57,6 @@
 - has_many :addresses
 - has_many :products
 
-<!--
-## credit_cardsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|payment_card_no|integer|null: false|
-|expire_month|integer|null: false|
-|expire_year|integer|null: false|
-|security_code|integer|null: false|
-|user_id|references|null: false, foreign_key: true|
-
-## Association
-belongs_to :user
- -->
-
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -103,8 +89,7 @@ belongs_to :user
 - belongs_to :brand
 - belongs_to :user
 - has_many :product_images
-- has_many :categories, through: :category_products
-- has_many :category_products
+- belongs_to :category
 
 
 ## products_imageテーブル
@@ -129,25 +114,16 @@ belongs_to :user
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|parent|references|null: false, foreign_key: true|
+|name|string|null: false|
+|main_category|references|null: true, index:true|
+|sub_category|references|null: true, index:true|
 
 ## Association
-- has_many :products, through: :category_products
-- has_many :category_products
-- belongs_to :parent_id, class_name: "Category"
-- has_many :childern, class_name: "Category", foreign_key: :parent_id
-
-
-## category_productsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|category_id|references|null: false, foreign_key: true|
-|product_id|references|null: false, foreign_key: true|
-
-## Association
-- belongs_to :category
-- belongs_to :product
-
+- has_many :products
+- has_many :category, class_name: "Category",foreign_key: "main_category_id"
+- has_many :category, class_name: "Category",foreign_key: "sub_category_id"
+- belongs_to :main_category, class_name: "Category"
+- belongs_to :sub_category, class_name: "Category"
 
 ## brandsテーブル
 |Column|Type|Options|
@@ -175,6 +151,7 @@ belongs_to :user
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |product_id|references|null: false, foreign_key: true|
+|total_payment|integre|null: false|
 
 ## Association
 - belongs_to :user

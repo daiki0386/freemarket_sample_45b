@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190310113600) do
+ActiveRecord::Schema.define(version: 20190311091309) do
 
   create_table "adresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "zip_code",   null: false
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 20190310113600) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "name",             null: false
+    t.integer "main_category_id"
+    t.integer "sub_category_id"
+    t.index ["main_category_id"], name: "index_categories_on_main_category_id", using: :btree
+    t.index ["sub_category_id"], name: "index_categories_on_sub_category_id", using: :btree
   end
 
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -97,6 +105,16 @@ ActiveRecord::Schema.define(version: 20190310113600) do
     t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
   end
 
+  create_table "purchases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",       null: false
+    t.integer  "product_id",    null: false
+    t.integer  "total_payment", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["product_id"], name: "index_purchases_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_purchases_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nickname",                             null: false
     t.string   "email",                                null: false
@@ -124,4 +142,6 @@ ActiveRecord::Schema.define(version: 20190310113600) do
   add_foreign_key "products", "product_sizes"
   add_foreign_key "products", "users"
   add_foreign_key "profiles", "users"
+  add_foreign_key "purchases", "products"
+  add_foreign_key "purchases", "users"
 end
